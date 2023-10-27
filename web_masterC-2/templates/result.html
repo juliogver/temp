@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MoodIT - Eye Analysis Result</title>
+    <link href="../static/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <a class="logo-link" href="/">
+            <img src="../static/logo.png" alt="Logo" class="logo-image">
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="result-section">
+      <h1 class="result__title">
+        Eye Analysis Result
+      </h1>
+      <div class="result__container">
+        <div class="result__content">
+          <h2>Analysis Result:</h2>
+          <!-- Utilize the "image_filename" variable to display the image -->
+          <img id="uploadedImage" src="{{ url_for('static', filename='uploads/' + image_filename) }}" alt="Uploaded Eye Photo">
+          <p class="success-message">Eye Analysis Successful!</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__logo">
+          <img src="../static/logo.png" alt="Logo" class="footer__logo-image">
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
